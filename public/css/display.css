@@ -1,0 +1,28 @@
+#bill-content-table {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#table-header {
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#table-header > div {
+    padding: 10px;
+    text-align: center;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid #ccc;
+}
+
+.table-row > div {
+    padding: 10px;
+    text-align: center;
+}

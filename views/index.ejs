@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BillSplit</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <link rel="stylesheet" href="/css/home.css"> -->
+    <script defer src="/js/home.js"></script>
+</head>
+<body>
+    <h1>Splitwise-on-Steroids</h1>
+
+    <form action="/" enctype="multipart/form-data" method="post" id="mainForm">
+
+        <h2>Participants</h2>
+        <div id="participantInpWrapper">
+            <input type="text" id="participantInp" name="participants[]">
+        </div>
+        <button type="button" id="addParticipantBtn">Add Participant</button>
+
+        <h2>Upload Bill Image</h2>
+        <input type="file" accept=".png, .jpeg, .jpg" name="billImage" id="billImageInp">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

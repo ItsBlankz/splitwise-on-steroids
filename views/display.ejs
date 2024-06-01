@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/display.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Splitwise-on-Steroids</h1>
+        <div id="bill-content-table">
+            <div id="table-header">
+                <div>Item</div>
+                <div>Price</div>
+                <div>Quantity</div>
+                <div>Total</div>
+            </div>
+            <div id="table-items">
+                <div class="table-row">
+                    <% for (let item in billJSON.items) { %>
+                        <div><%= item %></div>
+                        <div><%= billJSON.items[item].price %></div>
+                        <div><%= billJSON.items[item].quantity %></div>
+                        <div><%= billJSON.items[item].total %></div>
+                    <% } %>
+                </div>                       
+            </div>
+            <div>Taxes: <%= billJSON.tax %></div>
+            <div>Grand Total: <%= billJSON.grandTotal %></div>
+        </div>
+    <p><%= participants %></p>
+    <div class="billImage-container">
+        <img src="<%= billImage %>" alt="" srcset="">
+    </div>
+</body>
+</html>
