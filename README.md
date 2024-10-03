@@ -11,9 +11,3 @@ Well, my app here solves this exact issue. I make use of OCR (Optical CHaracter 
     <img src="https://skillicons.dev/icons?i=nodejs,html,css,react,mongodb,express&perline=3" />
   </a>
 </p>
-
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
