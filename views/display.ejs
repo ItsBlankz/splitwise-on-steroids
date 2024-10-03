@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="/js/display.js"></script>
+
+    <!-- Temporary Image CSS -->
+     <style>
+        img {
+            width: 300px;
+        }
+     </style>
+</head>
+<body>
+    <input type="button" value="Go Back" id="backButton">
+    <table border="border">
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        <% (billJSON.items).forEach(item => { %>
+         <tr>
+            <td><%= item.itemName %></td>
+            <td><%= item.price %></td>
+            <td><%= item.quantity %></td>
+            <td><%= item.total %></td>
+         </tr>
+        <% }) %>
+    </table>
+
+    <table border="border">
+        <% Object.keys(billJSON.tax).forEach(taxName => { %>
+         <tr>
+            <th><%= taxName %></th>
+            <td><%= billJSON.tax[taxName] %></td>
+         </tr>
+        <% }) %>
+        <tr>
+            <th>Service Charge</th>
+            <td><%= billJSON.serviceCharge %></td>
+        </tr>
+        <tr>
+            <th>Grand Total</th>
+            <td><%= billJSON.grandTotal %></td>
+        </tr>
+    </table>
+    <img src="data:image/webp;base64, <%= billImage %>" alt="" srcset="">
+</body>
+</html>
